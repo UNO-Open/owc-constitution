@@ -58,3 +58,36 @@ committed.  If you are making a pull request, be sure to make a pull request aga
 4. Commit, Push and make a Pull Request
 5. Announce the amendment at House Meeting.
 6. Wait for vote to pass then merge changes
+
+
+
+
+
+    • Article 1: Introduction
+        ◦ Section 1.A – Name
+        ◦ Section 1.B – Purpose
+        ◦ Section 1.C – Objectives
+            ▪ To facilitate the commons
+    • Article 2: Membership
+        ◦ for each: definition/qualifications/selection/expectations/privileges/evaluations/leave of Absense/Resignation/Terms (impeachment)
+        ◦ Community
+            ▪ What is afforded to the community by OWC/ 
+                • Access to services
+                • Involvement in operations
+        ◦ Open Works Collective
+            ▪ Member
+                • 
+            ▪ Officer
+                • 
+            ▪ Advisor
+    • Article 3: Voting
+        ◦ Definitions
+        ◦ Types of voting
+            ▪ section-voting period
+                • immediate
+                • regulatory (balloted) – candidate removal/selection, monetary investment, constitutional modification
+                • saving records of votes
+                • # of votes
+                    ◦ ties
+    • Article IV – Amendments / Constitutional Maintenance
+    • Article V – Financial Structure
