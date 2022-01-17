@@ -1,10 +1,10 @@
-# CSH Constitution
-The master branch's HEAD is the current legal constitution of CSH.
+# UNO Open Works Collective Constitution
+The main branch's HEAD is the current legal constitution of CSH.
 
 A compiled version of the document can be found [here](https://constitution.csh.rit.edu).
 
 ## Modifying the Constitution
-**Do not** make changes to master without their passing the proper house voting
+**Do not** make changes to the main branch without their passing the proper house voting
 procedures. (At the very least, not text changes, anyways)
 
 First, fork the consitution repo.  Before making any changes, create a new git branch.  
