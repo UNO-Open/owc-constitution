@@ -1,10 +1,10 @@
-# CSH Constitution
-The master branch's HEAD is the current legal constitution of CSH.
+# UNO Open Works Collective Constitution
+The main branch's HEAD is the current legal constitution of CSH.
 
 A compiled version of the document can be found [here](https://constitution.csh.rit.edu).
 
 ## Modifying the Constitution
-**Do not** make changes to master without their passing the proper house voting
+**Do not** make changes to the main branch without their passing the proper house voting
 procedures. (At the very least, not text changes, anyways)
 
 First, fork the consitution repo.  Before making any changes, create a new git branch.  
@@ -19,28 +19,6 @@ It is good practice to have an imperative clause in the subject line of your com
 Also, if your commit fixes any issues, put the issue number (with a # sign) in the commit body. ex: `fixes #102`
 
 Also, be sure to [rebase](https://git-scm.com/docs/git-rebase) multiple commits into one before making a pull request.
-
-
-## Document Style
-One sentence, one line. In general, follow the pattern of the existing document.
-
-## Software Requirements
-Must have make, and pdflatex installed.
-
-Installing dependencies on debian
-
-`sudo apt install texlive texlive-formats-extra make`
-
-Installing depencdencies on fedora
-
-`sudo yum install texlive make`
-
-
-## Compiling the Constitution
-Once required software is installed, simply run `make`.
-Running `make` will build and link the bylaws and articles properly.  
-Review the PDF output to check for any errors before making a pull request.
-If additional commits are made, be sure to [rebase](https://git-scm.com/docs/git-rebase) down to one commit before submitting a pull request.
 
 
 # Submitting a Pull Request or Issue
@@ -61,33 +39,33 @@ committed.  If you are making a pull request, be sure to make a pull request aga
 
 
 
+## Doument Outline
 
-
-    • Article 1: Introduction
-        ◦ Section 1.A – Name
-        ◦ Section 1.B – Purpose
-        ◦ Section 1.C – Objectives
-            ▪ To facilitate the commons
-    • Article 2: Membership
-        ◦ for each: definition/qualifications/selection/expectations/privileges/evaluations/leave of Absense/Resignation/Terms (impeachment)
-        ◦ Community
-            ▪ What is afforded to the community by OWC/ 
-                • Access to services
-                • Involvement in operations
-        ◦ Open Works Collective
-            ▪ Member
-                • 
-            ▪ Officer
-                • 
-            ▪ Advisor
-    • Article 3: Voting
-        ◦ Definitions
-        ◦ Types of voting
-            ▪ section-voting period
-                • immediate
-                • regulatory (balloted) – candidate removal/selection, monetary investment, constitutional modification
-                • saving records of votes
-                • # of votes
-                    ◦ ties
-    • Article IV – Amendments / Constitutional Maintenance
-    • Article V – Financial Structure
+- Article 1: Introduction
+  - Section 1.A – Name
+  - Section 1.B – Purpose
+  - Section 1.C – Objectives
+    - To facilitate the commons
+- Article 2: Membership
+  - for each: definition/qualifications/selection/expectations/privileges/evaluations/leave of Absense/Resignation/Terms (impeachment)
+  - Community
+    - What is afforded to the community by OWC
+      - Access to services
+      - Involvement in operations
+  - Open Works Collective
+    - Member
+      - • 
+    - Officer
+      - • 
+    - Advisor
+- Article 3: Voting
+  - Definitions
+  - Types of voting
+    - section-voting period
+      - immediate
+      - regulatory (balloted) – candidate removal/selection, monetary investment, constitutional modification
+      - saving records of votes
+      - # of votes
+        - ties
+- Article IV – Amendments / Constitutional Maintenance
+- Article V – Financial Structure
