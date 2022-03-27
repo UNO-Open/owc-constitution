@@ -2,21 +2,23 @@
 % -References will be automatically updated if any part is added, deleted, etc.
 %  However, if a sub part is moved to a different part, its references must be
 %  changed.
-% -This document must be ratified by the House (as per the Constitution) if
-%  changes are to be officialized.
 
 \documentclass{article}
 \providecommand{\RevisionInfo}{}
-\usepackage{hyperref}
-% Reformat section titles
-\usepackage{titlesec}
 
+%Included packages
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{pdfpages}
+\usepackage{graphicx}
 % This package is useful for debugging label problems
 % Comment out in final revision
 %\usepackage{showkeys}
 
 % Title page information
-\title{University Of New Orleans \\ Open Works Collective \\---Circumdans Omnia---}
+\title{University Of New Orleans \\ Open Works Collective Constitution \\ ---Omnia Circumstans---}
+\titleformat{\section}{\normalfont\Large\bfseries}{Article \thesection}{1em}{}
+\titleformat{\subsection}{\normalfont\large\bfseries}{Section \thesubsection}{1em}{}
 
 % Fix margins
 \setlength{\evensidemargin}{0in}
@@ -25,31 +27,27 @@
 \setlength{\topmargin}{0in}
 \setlength{\textheight}{8.5in}
 
-% Use \article for articles and \asection for sections of articles.
-% Automatically provide labels with the same article or section title.
+% Itemized list formatting
+\renewcommand\labelitemi{-}
+
+% Article and subsection formatting
 \newcommand{\article}[1]{\section{#1} \label{#1}}
 \newcommand{\asection}[1]{\subsection{#1} \label{#1}}
 \newcommand{\asubsection}[1]{\subsubsection{#1} \label{#1}}
+\newcommand{\asubsubsection}[1]{\paragraph{#1} \label{#1}}
+%\newcommand{\asubsubsubsection}[1]{\parindent=0em\subparagraph{#1} \label{#1}}
 \renewcommand{\thesection}{\Roman{section}}
 \renewcommand{\thesubsection}{\arabic{section}.\Alph{subsection}}
 \renewcommand{\thesubsubsection}{\arabic{section}.\Alph{subsection}.\arabic{subsubsection}}
-\titleformat{\section}{\normalfont\Large\bfseries}{Article \thesection}{1em}{}
-\titleformat{\subsection}{\normalfont\large\bfseries}{Section \thesubsection}{1em}{}
-
-% Adding an \asubsubsection -- I feel dirty
-%\setcounter{secnumdepth}{5}
-\newcommand{\asubsubsection}[1]{\paragraph{#1} \label{#1}}
 \renewcommand{\theparagraph}{\arabic{section}.\Alph{subsection}.\arabic{subsubsection}.\Alph{paragraph}}
+%\renewcommand{\thesubparagraph}{\arabic{section}.\Alph{subsection}.\arabic{subsubsection}.\Alph{paragraph}.\arabic{subparagraph}}
 
-% Adding \a(sub){3,4}section during merge of bylaws and articles -- I feel _really_ dirty
 \setcounter{secnumdepth}{7}
 \setcounter{tocdepth}{7}
-\newcommand{\asubsubsubsection}[1]{\parindent=0em\subparagraph{#1} \label{#1}}
-\renewcommand{\thesubparagraph}{\arabic{section}.\Alph{subsection}.\arabic{subsubsection}.\Alph{paragraph}.\arabic{subparagraph}}
 
-\newcounter{asubsubsubsubsection}[subparagraph]
-\renewcommand{\theasubsubsubsubsection}{\arabic{section}.\Alph{subsection}.\arabic{subsubsection}.\Alph{paragraph}.\arabic{subparagraph}.\Alph{asubsubsubsubsection}}
-\newcommand{\asubsubsubsubsection}[1]{\parindent=0em\refstepcounter{asubsubsubsubsection}\par\textbf{\theasubsubsubsubsection\hspace{1em}#1 \label{#1}}}
+%\newcounter{asubsubsubsubsection}[subparagraph]
+%\renewcommand{\theasubsubsubsubsection}{\arabic{section}.\Alph{subsection}.\arabic{subsubsection}.\Alph{paragraph}.\arabic{subparagraph}.\Alph{asubsubsubsubsection}}
+%\newcommand{\asubsubsubsubsection}[1]{\parindent=0em\refstepcounter{asubsubsubsubsection}\par\textbf{\theasubsubsubsubsection\hspace{1em}#1 \label{#1}}}
 
 % Headings
 \pagestyle{myheadings}
@@ -57,7 +55,21 @@
 
 \begin{document}
 % Title
+
+
+%\title{
+%\includegraphics[width=0.5\textwidth]{UNO.png}~}
+
 \maketitle
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.5\textwidth]{UNO.png}
+\end{figure}
+\thispagestyle{empty}
+
+\newpage
+
 \tableofcontents
 
 % ARTICLE I Introduction
@@ -65,9 +77,9 @@
 \article{Introduction}
 
 \asection{Name}
-The name of this organization shall be the: 
-Open Works Collective;
-Abbreviated: OWC
+The name of this organization shall be the: Open Works Collective;
+Abbreviated: OWC; 
+%Otherwise referred to as UNO-Open on Github. %there may be distinction
 
 \asection{Purpose}
 The purpose of this organization is to garden a productive open ecosystem for communities associated with the University of New Orleans to foster interdisciplinary creativity through the intersection of inclusivity, transparency, and collaboration.
@@ -75,223 +87,200 @@ The purpose of this organization is to garden a productive open ecosystem for co
 \asection{Objectives}
 The objectives of the Open Works Collective are:
 \begin{enumerate}
-	\item To organize/promote open forms of collaboration with a focus in our university community
-	\item To root ourselves in diversity of perspective, thought and interest
-	\item To foster mutualistic communitcation across disciplines and departments 
-	\item To support the rigorous exploration of creative projects and research
+    \item To root ourselves in diversity of perspective, thought and interest
+	\item To cultivate open forms of collaboration with a focus in our university community
 	\item To maintain a common space, digital and otherwise, that is inclusive and accepting to all people
-	\item - This space should facilitate community interconnectivity/function/health/growth and be resilient to harmful speech or actions
-	\item To develop and offer resources for education relevant to our purpose 
-	\item Enable self-determination.
+	\begin{itemize}
+	    \item This space should facilitate community interconnectivity/function/health/growth and be resilient to harmful speech or actions
+	\end{itemize}
+	\item To foster mutualistic communication across disciplines, departments and talents
+	\item To support the rigorous exploration of creative projects and formal research
+	\item To develop and present resources for education relevant to our purpose 
+	\item To enable self-determination
 \end{enumerate}
 
-% IDEALS: A potential section regarding our influencing ideals and where they come from - NEEDS REVIEW FROM CEDRIC & RAVEN
-%\asection{Ideals}
-%Some foundational ideals of the Open Works Collective are:
-%\begin{enumerate}
-%	\item Openness as derived from the open movement - for the goal of reducing friction in the sharing of information  
-%	\item Inclusivity for all 
-%	\item Ineropable design - structured for 
-%	\item To provide a friendly and comfortable living environment in the residence halls
-%\end{enumerate}
+\asection{Ideals}
+Some foundational ideals of the Open Works Collective are:
+\begin{enumerate}
+	\item Openness as derived from the open movement - for the goal of reducing friction in the sharing of information
+	\item Inclusivity for all
+\end{enumerate}
+
+\asection{Approach}
+This section outlines the ways in which the owc aims to spend much of its time. %Rephrase
+\begin{enumerate}
+    \item Authentic Discourse as a means for generating change, inward and ourward facing. 
+    \item - organizing dialogues in open settings [i.e. ampitheater, university center, city park...]
+	\item - While official university membership is required for organization membership, authenticity/kindness is the only requisite for community involvement
+\end{enumerate}
 
 %
-% ARTICLE II - MEMBERSHIP
+% ARTICLE II - Involvement
 %
-\newpage
-\article{Membership}
-There are four major types of membership available to Open Works Collective.
-Each carries different qualifications, roles, and privileges.
+\article{Involvement}
+All members are encouraged to approach every interaction from a place of mutual respect.
+\begin{itemize}
+    \item There are four major types of membership available to Open Works Collective.
+Each carries unique requisites, roles, and affordances.
+    \item Active membership stacks on general membership, and committee membership stacks on active membership.
+Advisory membership stacks on general and is active by default.
+\end{itemize}
 
-%\begin{description}
-	%\item[Qualifications:] What qualifications an applicant needs to apply
-	
-	%\item[Expectations:] The duties and responsibilities of Open Works Collective members
-	%\item[Privileges:] The benefits offered to House members
-
-	%\item[Resignations:] The process by which a member terminates Open Works Collective membership
-	%\item[Term:] The length of time the membership lasts
-%\end{description}
+\begin{description}
+    \item[Requisites:] Actions or processes [hoops to jump through] an applicant needs to apply
+	\item[Roles:] The roles and duties of Open Works Collective members
+	\item[Affordances:] The benefits offered to Open Works Collective members
+\end{description}
 
 \asection{General Membership}
-%\asubsection{General Membership Qualifications and Privileges}
+General members are encouraged to engage in meetings, projects, and with resources.
 \begin{itemize}
-	\item General Membership is open to all people officially associated with the University of New Orleans.
-	\item The roles of the General members is to act as an ambassadors of the Open Works Collective.
+	\item \textbf{Requisites:}  General Membership is open to all people officially associated with the University of New Orleans.
+	\item \textbf{Roles:} The role of general membership is to act as ambassadors of the Open Works Collective.
+	\item \textbf{Affordances:} General members have the capacity to participate in other forms of membership.
 \end{itemize}
 
 \asection{Active Membership}
+Active members are encouraged to support community participation.
 \begin{itemize}
-	\item Active Membership is open to all General members who have attended a meeting within the last two months.
-	\item The role of active members is to participate in meetings and projects. 
-	\item Active members have the opportunity to become committee members.
+	\item \textbf{Requisites:} Active Membership is attributed to all General members who have attended two of the last five meetings held.
+	\item \textbf{Roles:} The role of active members is to participate in meetings and projects.
+	\item \textbf{Affordances:} Active members have the opportunity to become committee members.
 \end{itemize}
 
 \asection{Committee Membership}
+Committee members are encouraged to be mentors to the community.
 \begin{itemize}
-	\item Committee Membership is open to all Active members.
-	\item Committee members have voting rights.
-	\item Committee members may participate in more than one Open Works Collective Committee.
-	\item The role of committee members is to participate in all their respective committee meetings.
+	\item \textbf{Requisites:} Committee Membership is open to all Active members. 
+	\item \textbf{Roles:} The role of committee members is to participate in their respective committee(s) meetings. 
+	\item \textbf{Affordances:} Committee members may participate in more than one Open Works Collective Committee.
 \end{itemize}
 
 \asection{Advisory Membership}
+Advisory members are encouraged to help forge connections through networking.
 \begin{itemize}
-	\item Advisory Membership is open to any University Employee interested in supporting the Open Works Collective efforts.
-	\item The Open Works Collective must have at least one advisory member at all times.
-	\item Advisory members are not excluded from participating in committees.
+	\item \textbf{Requisites:} Advisory Membership is open to anyone qualified to be an advisor to a student organization at the University of New Orleans.
+	\item \textbf{Roles:} The Open Works Collective must have at least one advisory member at all times.
+	\item \textbf{Affordances:} Advisory members don't need to maintain attendance to be active members; they are afforded active membership by default. %Repharse?
 \end{itemize}
-\newpage
+
+\asection{Exiting Membership}
+Resignation can occur in two ways, direct or indirect
+\asubsection{Resignation}
+\begin{itemize}
+	\item \textbf{Direct resignations} can be communicated to the root committee.
+	\item \textbf{Indirect resignations} occur when members are no longer qualified for membership.
+	%\item breach in code of conduct %Rephrase
+\end{itemize}
+
+%\asubsection{Termination} %Wher is Impeachment of  Committee member?
+%possible sent
+%\begin{itemize}
+%	\item Breach in code of conduct %- LINKTOCODEOFCONDUCT %Rephrase
+%	\item With an invitation to return with renewed sense of mutual respect.
+%\end{itemize}
+
 %
-% ARTICLE V - Committees
+% ARTICLE III - Committees
 %
 \article{Committees}
-The Committees are the main governing body of the Open Works Collective.
-Its purpose is to provide leadership and direction for the Open Works Collective, to oversee the day-to-day operations of the Collective, and to initiate and organize programs and projects for the Collective.
-It is composed of the seven permanent directors and the Chairperson.
-\\*\\*
-There is one permanent directorship for each major aspect of the government of the Collective and each one is chaired by an Steering Committee member.
-Ad Hoc directorships are created on an as-needed basis.
-They are generally very task oriented and are chaired by a Collective member.
-A directorship has some jurisdiction in its area of interest and often is responsible for the day-to-day decisions regarding its area of interest.
-Any large expenditures or large effect decisions must be brought before the entire Collective via the Steering Committee.
+Committees are the essential unit of governance for the Open Works Collective.
+Their purpose is to provide leadership and direction for the Open Works Collective, to oversee the day-to-day operations of the Collective, and to organize and support programs and projects for the Collective.
 
-\asection{Standing Committees}
-A standing committee is a permanent panel that can open or close.
-\asubsection{Steering Committee}
 \begin{itemize}
-	\item The Steering Committee can never be disolved.
-	\item The Open Works Collective
-	\item 
+    \item Committees are sets of people working to fulfill a role.
+    \item All committee meetings are to be held transparently.
+    \item Roles can be determined dynamically.
+\end{itemize}
+
+%Committees engage with OWC and community members to organize intiatives that further each committee's respective focus. 
+%Committees behave with a focus on their respective areas. Work relevant to said areas should be done with the awareness of its committee(s). 
+
+
+\asection{The Root Committee}
+The Root Committee is a nucleus for open work at the University of New Orleans.
+\begin{itemize}
+	%\item The Root Committee's role is that of cultivating awareness of access to open approaches.
+	%\item Role: to be a conduit for relevant progress of OWC
+	\item The role of the root committee is to instigate the self organization of the Open Works Collective and that of the communities of communities in the open work ecosystem, particularly as the University of New Orleans interfaces with them.
+	\item Any large expenditures or large effect decisions must be brought before the entire Collective via the Root Committee.
+	\item Root commitee members are determined by a scheduled vote (\ref{Scheduled Vote}) and reach two-thirds (\ref{Number of Votes Required}) of total number of votes cast of all presentlty voting OWC members.
+	%\item Through reciprocal engagement from and with the OWC and the open work community of UNO.
+	%\item Active members must apply for a scheduled vote and reach two-thirds of total number of votes cast of all presentlty voting OWC members, in order to be inducted as root committee members.
 \end{itemize}
 
 \asection{Ad-Hoc Committees}
-An ad-hoc committee is a temporary panel that can open or close, and has the opportunity to become a standing comittee.
-\asubsection{Becoming a Standing Committee}
+An ad-hoc committee is a temporary panel that can open or close, and has the opportunity to become a standing comittee.\\
+Ad-hoc committees are created on an as-needed basis and are generally very task oriented.
+
+\asubsection{Creating an Ad-Hoc Committee}
+Any OWC member can request to create an ad-hoc committee. Below are the following requirements to create an ad-hoc committee.
 \begin{itemize}
-	\item To become a standing committee, an ad-hoc comittee must request standing committee status (by appealing to the steering committee) and a quorum must be reached in favor upon the vote following the request. 
-	\item The Open Works Collective
-	\item 
+	\item Sponsorship of at least one incumbent root committee member.
+	\item A minimum of two initial active members. 
+	\item An inital reasoning for forming the ad-hoc committee.
+\end{itemize}
+After the completion of these requirements, the ad-hoc committee will be instated as an official OWC ad-hoc committee.
+Any active member can collobarate under the role of committe member. Once a year has passed since the creation of the ad-hoc committee, the ad-hoc committee must go through a renewal period to determine its necessity. The renewal is determined by a scheduled vote (\ref{Scheduled Vote}) and reach two-thirds (\ref{Number of Votes Required}) of total number of votes cast of all presentlty voting OWC members.
+
+\asection{Standing Committees}
+A standing committee is a permanent panel accessible to any active OWC members. This committee can be opened or closed as deemed necessary by any member raising to motion for a scheduled vote (\ref{Scheduled Vote}). 
+\begin{itemize}
+	\item The standing commitees are formed to fill unique and necessary roles.
+	\item Any active member can become a commmittee member within the standing committee(s) of their choice. 
+	%\item Define how standing committees are dissolved
+\end{itemize}
+\asubsection{Becoming a Standing Committee}
+To become a standing committee, an ad-hoc comittee must request standing committee status (by appealing to the root committee) and a quorum must be reached in favor upon the vote following the request. \\
+Requisites for the application process:
+\begin{itemize}
+	\item An ad-hoc commitee that is ready to become a standing commitee.
+	%\item A renewal date 
+	\item OWC must hold a scheduled vote (\ref{Scheduled Vote}) and reach two-thirds (\ref{Number of Votes Required}) of total number of votes cast of all presentlty voting OWC members.
 \end{itemize}
 
 
-%\asection{Steering Committee}
-%The Steering Committee can never be disolved and is composed of the four officer positions. Shall be res3
-%\begin{itemize}
-%    \item Shall be responsible for presenting a copy of the minutes to all members of the Faculty/Staff Advisor.
-%    \item Shall handle all organization correspondence.
-%    \item Shall keep a list of all active members.
-%\end{itemize}
+%\asection{Term}
+%The terms of office for all elected officials shall be two (2) consecutive semesters beginning in the fall.
 
-%\asubsection{Financial Officers}
-%\begin{itemize}
-%    \item Shall have the right to vote except when acting as Chair.
-%    \item Shall be in charge of all organization finances.
-%    \item Shall keep an accurate account of all finances and shall give a report at every meeting.
-%    \item Shall be responsible for submitting semester financial reports to the organization.
-%\end{itemize}
-
-%\asubsection{Information Officers}
-%\begin{itemize}
-%    \item Responsible for minutes of officer meetings
-%    \item Maintains schedule of events.
-%    \item Maintains critical information the club need.
-%\end{itemize}
-
-%\asection{Standing committees}
-%The Standing Committee is a permanent panel that can open or close.
-%\asubsection{External Affairs Committee}
-%Shall be responsible for fundraising, public relations, publications, and marketing.
-%\asubsubsection{Responsibilities}
-%\asubsection{Governance Committee}
-%Shall be responsible for the on-going educational oppurtunities for the organization, group recruits, and orientation for new board members.
-%\asubsubsection{Responsibilities}
-%\asubsection{Internal Affairs Committee}
-%Shall be responsible for internal and operational issues related to finance, capital aquistion, and investments for the organization.
-%\asubsubsection{Responsibilities}
-%\asection{Ad Hoc Committee}
-
-%\renewcommand{\theenumi}{\alph{enumi}} % For this section, we want items to use letters
-%\asubsection{Responsibilities of the Steering Committee}
-%\begin{enumerate}
-%	\item To hold a weekly meeting specific to their responsibilities and submit notes to the House
-%	\item To meet, as an Executive Board, at least weekly during the Standard Operating Session, as defined in \ref{Standard Operating Session} to discuss and report the operations of the House
-%	\item To report pertinent information to House members at the following House Meeting
-%	\item To maintain records of the goals defined by each previous Executive Board
-%	\item To act as a Judicial Board as defined in \ref{Judicial}
-%	\item To review major projects, as defined in \ref{Expectations of House Members}, presented to them by the Evaluations director
-%	\item To make the final vote regarding conditionals and appeals as defined in \ref{Membership Evaluation}
-%	\item To respect the privacy of House members confiding in the Executive Board, barring situations related to endangerment of oneself or others, sexual assault, or in the case of a Judicial Board
-%	\item To publish a document at the end of each semester to all Members stating House’s accomplishments of that semester
-%	\item To review and update the Constitution at the end of each Standard Operating Session, as defined in \ref{Standard Operating Session}.
-%		The constitution should remain up to date with current practices.
-%\end{enumerate}
-
-%\asubsection{Responsibilities of the Standing Committee}
-%\begin{enumerate}
-%	\item To preside over Executive Board and House Meetings
-%	\item To exercise general supervision over the operations of the Executive Board
-%	\item To exercise general supervision over regular House activities
-%	\item To act as a liaison to the academic and administrative departments at RIT
-%	\item To act as a part of a Judicial Board as defined in \ref{Judicial}
-%	\item To cast tie-breaking vote in a split decision in an Executive Board vote
-%\end{enumerate}
-
-\asection{Term}
-The terms of office for all elected officials shall be two (2) consecutive semesters beginning in the fall.
-
-\newpage
 %
-% ARTICLE III - VOTING
+% ARTICLE IV - VOTING
 %
 \article{Voting}
-This article defines voting procedures.
+This article defines voting procedures that are incorporated into Open Works Collective.
 \asection{Eligibility}
 All Open Works Collective members are eligible to vote.
 \asection{Definitions}
 \asubsection{Total Number of Possible Votes}
-The number of Active members eligible to vote.
+The number of active members eligible to vote.
 \asubsection{Total Number of Votes Cast}
-The Total Number of Votes Cast is defined as the total number of votes received for every voting option minus the number of abstentions.
+The total number of votes cast is defined as the total number of votes received for every voting option minus the number of abstentions.
 \asubsection{Quorum}
-A Quorum is defined by the minimum number of votes cast required for a vote to be official.
+A quorum is defined by the minimum number of votes cast required for a vote to be official.
 It is a fraction or a percentage of the total number of possible votes.
-Any member present for an Immediate Vote or given a ballot who does not explicitly cast their vote is counted as an Abstention.
-A Quorum is reached if the Total Number of Votes Cast plus the number of Abstentions is equal to or exceeding the minimum number of votes required.
+Any member present for an instantaneous vote or given a ballot who does not explicitly cast their vote is counted as an abstention.
+A quorum is reached if the total number of votes cast plus the number of abstentions is equal to or exceeding the minimum number of votes required.
 \asubsection{Proxy Ballot}
-A Proxy Vote is defined as any ballot that was cast by one member on behalf of another member.
-Any member may cast a Proxy Vote for another member who is unable to actually participate in the vote.
-A Proxy Vote must be explicitly written down and signed by the member not in attendance.
-The count of all Proxy Vote must be recorded and announced in all votes.
-Proxy Votes are only permissible where explicitly stated, at the discretion of the Chair of the Vote.
+A proxy vote is defined as any ballot that was cast by one member on behalf of another member.
+Any member may cast a proxy vote for another member who is unable to actually participate in the vote.
+A proxy vote must be explicitly written down and signed by the member not in attendance.
+The count of all proxy vote must be recorded and announced in all votes.
+Proxy votes are only permissible where explicitly stated, at the discretion of the root committee.
 \asubsection{Abstention}
-An Abstention is defined as a vote indicating a neutral position in the vote.
+An abstention is defined as a vote indicating a neutral position in the vote.
 A means to abstain must always be provided in a vote.
-Abstentions are counted towards a Quorum, but not towards the Total Number of Votes Cast used to determine if a vote passes or not.
+Abstentions are counted towards a quorum, but not towards the total number of votes cast used to determine if a vote passes or not.
 \asubsection{Vote Counters}
-The current members of the Open Works Collective's steering committee are vote counters. There must be at least three committee members to count votes.
-%\asubsection{Voting Members}
-%\begin{itemize}
- %   \item 1
-  %  \item 2
-   % \item 3
-%\end{itemize}
-
-%\asubsection{Non-Voting Members}
-%\begin{itemize}
-%	\item Chairperson
-%	\item House Secretary
-%	\item Ad Hoc Director(s)
-%\end{itemize}
+The current members of the Open Works Collective's root committee are vote counters. There must be at least three committee members to count votes.
 
 \asection{Types of Voting}
 
 \asubsection{Scheduled Vote}
 \asubsubsection{Method of Vote}
-Votes are cast on paper ballots, which provide a means to indicate every possible option in the vote.
+Votes are cast on paper ballots and or via certifiable digital means, which provide a means to indicate every possible option in the vote.
 A ballot is then distributed to each acitve Open Works Collective member that is eligible to cast a vote and then votes are collected in the designated ballot box for a pre-specified length of time.
-At the end of the voting period, the Chair of the Vote collects the ballots, closing the voting period.
-The Vote Counters then tally the results.
+At the end of the voting period, the root committee collects the ballots, closing the voting period.
+The vote counters then tally the results.
 
 \asubsubsection{Voting Period}
 For constitutional modification, candidate selection, and officer removal votes, the voting period must be at least forty-eight (48) hours in length.
@@ -299,94 +288,103 @@ For any other type of vote, the voting period must be at least twenty-four (24) 
 The minimum length of the voting period may be explicitly lengthened, but never shortened, in the text describing the actual vote.
 \asubsection{Instantaneous Vote}
 \asubsubsection{Method of Vote}
-The current members of the Open Works Collective's steering committee will state all possible ways to vote, then call out each possibility one at a time.
-The chairing member will count the number of members casting their instantaneous vote for that possibility. Instantaneous votes will be planned in advanced and will be held during meetings. The current members of the Open Works Collective's steering committee will decided whether or not the subject being voted on should be instantaneous or scheduled.
+The current members of the Open Works Collective's root committee will state all possible ways to vote, then call out each possibility one at a time.
+A root member will count the number of members casting their instantaneous vote for that possibility. Instantaneous votes will be planned in advance and will be held during meetings. The current members of the Open Works Collective's root committee will decide whether or not the subject being voted on should be instantaneous or scheduled.
 \asubsubsection{Voting Period}
 An instantaneous vote lasts as long as it takes for all votes to be tallied.
 
 \asection{Number of Votes Required}
-The Number of Votes Required refers to the numbers required to achieve a quorum and for a vote to pass.
+The number of votes required refers to the numbers required to achieve a quorum and for a vote to pass.
 Below are listed four standard votes.
 Numbers for non-standard votes are defined in the section describing the actual vote.
 \asubsection{Simple Majority}
-In a Simple Majority Vote, a Quorum is reached if the Total Number of Votes Cast is equal to or exceeds one-half the Total Number of Possible Votes.
+In a simple majority vote, a quorum is reached if the total number of votes cast is equal to or exceeds one-half the total number of possible votes.
 An option in the vote passes if the number of votes cast for that option is larger than the number of votes cast for every other option individually.
 \asubsection{Fifty Percent}
-In a Fifty Percent Vote, a Quorum is reached if the Total Number of Votes Cast is equal to or exceeds one-half the Total Number of Possible Votes.
-An option in the vote passes if the number of votes cast for that option exceeds fifty percent of the Total Number of Votes Cast.
+In a fifty percent vote, a quorum is reached if the total number of votes cast is equal to or exceeds one-half the total number of possible votes.
+An option in the vote passes if the number of votes cast for that option exceeds fifty percent of the total number of votes cast.
 \asubsection{Two-Thirds}
-In a Two-thirds Vote, a Quorum is reached if the Total Number of Votes Cast is equal to or exceeds two-thirds the Total Number of Possible Votes.
-An option in the vote passes if the number of votes cast for the option equals or exceeds two-thirds of the Total Number of Votes Cast.
-
-
+In a two-thirds vote, a quorum is reached if the total number of votes cast is equal to or exceeds two-thirds the total number of possible votes.
+An option in the vote passes if the number of votes cast for the option equals or exceeds two-thirds of the total number of votes cast.
 
 \asection{Ties Between Vote Options}
 \asubsection{With Pass/Fail}
 If the number of votes cast for the pass option equals the number of votes cast for the fail option, then the vote has failed.
 \asubsection{With Multiple Options}
 If multiple options may pass, a tie does not present a problem.
-If only one option may pass, then the vote must be recast or tabled at the discretion of the current President of the Open Works Collective.
-In the event of a tie in a Steering Committee vote, the *Chairperson* may cast the tie-breaking vote.
+If only one option may pass, then the vote must be recast or tabled at the discretion of current root committee members of the Open Works Collective.
+In the event of a tie in a vote, the root committee may cast the tie-breaking vote.
 
-% ARTICLE IV - AMENDING THIS CONSTITUTION
+\asection{Voting Matters}
+Matters which require a vote.
+\begin{itemize}
+	\item Approval of application for root committee membership
+	\item Transition of ad-hoc committee to standing committee status
+	\item Any miscellaneous endeavor that can be voted on instantaneously
+	%\item Termination of membership as a result of breech in code of conduct
+	
+\end{itemize}
+
+% ARTICLE V - AMENDING THIS CONSTITUTION
 \article{Amending this Constitution}
-The main brainch of the uno-open/governance repository on github is the most upstream version and should be regarded as the OWC's current constitution. 
-
-Collaborative development is done with pull request approach
-1 - fork
-
-Any/All merges to it must be reviewed and approved by at least [2 directors/5 members of the governance committee/...]
-
-
-
-
+The main brainch of the uno-open/owc-constitution repository hosted on github is to be regarded as the Open Works Collecive's current constitution.
+Collaborative development on this document is done with the \href{https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/getting-started/about-collaborative-development-models}{fork and pull model} of collaborative development. \\ \\
+Workflow Outline:
+\begin{enumerate}
+    \item Fork uno-open/owc-constitution
+    \item Commit changes to personal fork
+    \item Submit pull request to 'dev' branch
+    \item Merge to 'main' branch during constitutional maintenance period
+\end{enumerate}
 
 \asection{Non-Semantic Changes}
 There are two methods for non-semantic change to the Constitution.
 A Maintainer may approve any proposed change that does not affect the meaning of the document.
-Alternatively, the change may be presented to the steering committee for discussion followed by an instantaneous vote.
-A quorum of fifty percent of the Total Number of Possible Votes is required for passage.
+Alternatively, the change may be presented to the root committee for discussion followed by an instantaneous vote.
+A quorum of fifty percent or more of the total number of possible votes of all presentlty voting OWC members is required for passage.
 
 \asection{Semantic Changes}
 Any semantic change to the Constitution requires the change to be proposed in writing for discussion at a Open Works Collective Meeting.
-Any modifications made due to the discussion are added to the written proposal and the modified proposal is submitted to the steering committee for evaluation.
-The final proposal is presented at the following meeting and ballots are distributed for a scheduled vote.
-The ballots are collected for a minimum of a forty-eight hour period.
-A quorum of two-thirds of the Total Number of Possible Votes must cast ballots for the vote to be official.
-A vote equaling or exceeding two-thirds of the number of votes cast is required for the change to be placed into the constitution.
-The Constitution may be overridden by an instantaneous vote under the steering committee.
-There must be a quorum of eighty-five percent of the Total Number of Possible Votes for the vote to be official.
-A vote equaling or exceeding ninety percent of the number of votes cast is required for the override to take effect.
+Any modifications made due to the discussion are added to the written proposal and the modified proposal is submitted to the root committee for evaluation.
+The final proposal is presented at the following meeting and ballots are distributed for a scheduled vote and must reach a two-thirds of total number of votes cast of all presentlty voting OWC members.
 
-\asection{Constitution maintainers}
-
-\asubsection{Maintainer Qualifications}
-Maintainers must be Active or Alumni in good standing.
-
-\asubsection{Maintainer Expectations}
-Maintainers are expected to:
+\asection{Systematic Iteration}
+There is a designated constitutional maintenance period every semester for a duration of two weeks. During this period, all potential commits to the constitution hosted in the 'dev' branch of https://github.com/UNO-Open/owc-constitution, should be processed and merged to the main branch.
 \begin{itemize}
-	\item Review changes to the Constitution for grammar, spelling, and internal consistency
-	\item Keep a public record of changes to the Constitution
-	\item Participate in discussion of proposals
-	\item Facilitate the creation of new changes to the Constitution by other members
-	\item Be knowledgeable about the Constitution
+    \item Anyone is welcome to fork, commit changes, and make pull requests to our constitution; we welcome this collaboration.
+    \item The 'dev' branch is where pull requests should be made between constitutional maintenance periods.
 \end{itemize}
-Failure to meet any of these roles is grounds for revocation of Maintainer status by the Executive Board.
 
-\asubsection{Maintainer Selection}
-Any member may nominate a qualified member for Maintainer status to the *Executive Board* for consideration.
-The *Executive Board* may choose to approve or reject the nomination by Simple Majority vote.
-\asection{Impeachment}
-An officer may be removed from their position due to negligence of duty, inefficiency within office, and or any other action which is considered detrimental to the name or purpose of the organization. An officer may be removed from office with a scheduled vote and two-thirds of the votes from active members.
+%\asection{Constitution maintainers}
 
+%\asubsection{Maintainer Qualifications}
+%Maintainers must be Active or Alumni in good standing.
+
+%\asubsection{Maintainer Expectations}
+%Maintainers are expected to:
+%\begin{itemize}
+%	\item Review changes to the Constitution for grammar, spelling, and internal consistency
+%	\item Keep a public record of changes to the Constitution
+%	\item Participate in discussion of proposals
+%	\item Facilitate the creation of new changes to the Constitution by other members
+%	\item Be knowledgeable about the Constitution
+%\end{itemize}
+%Failure to meet any of these roles is grounds for revocation of Maintainer status by the Executive Board.
+
+%\asubsection{Maintainer Selection}
+%Any member may nominate a qualified member for Maintainer status to the *Executive Board* for consideration.
+%The *Executive Board* may choose to approve or reject the nomination by Simple Majority vote.
+%\asection{Impeachment}
+%An officer may be removed from their position due to negligence of duty, inefficiency within office, and or any other action which is considered detrimental to the name or purpose of the organization. An officer may be removed from office with a scheduled vote and two-thirds of the votes from active members.
+
+%define level of access that these postions have
 
 \article{Financial Structure}
 \asection{Holdings}
-Fiscal value will be stored in a uno federal credit union account, the director/chair of the %\ref____ comittee must be on the acct.
-%\asubsection{Membership Dues}
-%No dues are expected or required to participate in the OWC.
-\asubsection{Donations}
+Fiscal value will be stored in a uno federal credit union account. The root commitee will openly share all past and present financial statements, including account balance any organizational expenses. %\ref____ comittee must be on the acct.
+\asection{Donations}
 Any/all donations recieved will be spent transparently and in the best interest of the community.
 %https://opencollective.com/how-it-works
 \end{document}
+
+
